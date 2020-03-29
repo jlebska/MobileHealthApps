@@ -1,0 +1,38 @@
+Challenges4
+1.
+Nullable Safety jest to używanie typów nullable w celu zabezpieczenia przed "pustymi"
+referencjami kodu. Typy nullable są to typy zmiennych, które mogą mogą przechowywać 
+wartość danego typu lub wartość null. Oznacza się je znakiem zaputania po nazwie typu np.Int?
+2.
+Elvis operator pozwala na "wyciągniecie" wartości ze zmiennej nullable, a w przypadku 
+wartości null zwraca on wartość domyślną.
+3.
+Zarówno !! jak ?. pozwalają na dostęp do wartości nullable, lecz !! może spowodować
+NullPointerException, gdy wartość zmiennej jest null. ?. to tzw. "Safe call", daje 
+on dostęp do nullable, a w przypadku wartośći null zwraca null, lecz bez powodowanie wyjątku.
+4.
+var name:String? = "Bożena" //valid
+var age: Int = null //invalid
+val distance:Float = 26.7 //invalid
+var middleName: String? = null //valid
+5.
+fun main() {
+    fun divideIfWhole(number1:Int,number2:Int):Int?{
+        if (number1%number2==0){
+            var result:Int=number1
+            var counter:Int=0
+            while (result%number2==0){
+                counter+=1
+                result=result/number2
+            }
+            println("Yep,it divides $counter times")
+            return counter
+        }
+        else {
+            println("Not divisible :[")
+            return null
+        }
+    }
+
+    divideIfWhole(number1=5,number2=3)
+}

@@ -1,0 +1,33 @@
+Challenges3
+1.
+Funkcja doSomething skompiluje się, nie potrzebne są żadne zmiany.
+Funkcja threeMultiplication nie skompiluje się, 
+ponieważ wartość przyjmowana jako argument funkcji nie może być modyfikowana.
+Należy zmienić wartość zwracaną.
+fun threeMultiplication(x:Int):Int{
+    return x*3
+}
+Funkcja maxValue nie skompiluje się, ponieważ  nie został sprecyzowany
+typ zwracany. Należy dodać typ zwracany.
+fun maxValue(args:Array<Int>): Int {
+    var max=args[0]
+    var x=1
+    while (x<args.size) {
+        var item=args[x]
+        max=if (max>=item) max else item
+        x=x+1
+    }
+    return max
+}
+2.
+fun printResult(userChoice:String,gameChoice:String){
+    val result: String
+    if (userChoice==gameChoice)  result="Tie!"
+    else if ((userChoice=="Rock" && gameChoice=="Scissors") ||
+         (userChoice=="Paper" && gameChoice=="Rock") ||
+         (userChoice=="Scissors" && gameChoice=="Paper")) result="You win!"
+    else result="You lose!"
+
+    println("You chose $userChoice. I chose $gameChoice. $result")
+}
+ 

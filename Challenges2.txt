@@ -1,0 +1,26 @@
+Challenges2
+1.
+Suma= 55, Liczba iteracji=11
+2.
+Są to sekwencja policzalnych liczb całkowitych
+3.
+Ponieważ musi zawierać liczbę kończącą zakres
+4.
+Switch w Cpp pozwala na wybór między sekcjami kodu w zależności od
+wartości wyrażenia całkowitego. Wybór danego przypadku ma miejsce wyłącznie,
+gdy podana wartość dokładnie pokrywa się z wartością przypadku, a gdy
+to nie nastąpni wowoływany jest przypadek domyślny.
+When w Kotlinie dopasowuje argument do gałęzi warunków, dopóki jeden
+nie zostaje spełniony. Dopasowanie nie polega wyłącznie na dokładnym pokrywaniu się, 
+lecz również może to być spełnienie jakiegoś warunku, tak jak w wyrażeniu if..else.
+Dodatkową zaletą tego wyrażenia jest możliwość zwracania jakiejś wartości 
+przez przypadki oraz możliwość wywołania when bez argumentu.
+5.
+fun main() {
+    var countdown:Int
+    val start=10
+    for(i in 0..10){
+        countdown=start-i
+        print("$countdown ")
+    }
+}

@@ -1,0 +1,49 @@
+Challenges5
+1.
+fun removeOne(item:Int,list: List<Int>):List<Int>{
+    var list2=list.toMutableList()
+    for (i in 0 until list2.size){
+        if(i==item){
+            list2.remove(i)
+        }
+    }
+    return list2
+}
+2.
+fun remove(item:Int,list: List<Int>):List<Int>{
+    var list2=list.toMutableList()
+    for (i in 0 until list2.size){
+        list2.removeAll{i -> i==item}
+    }
+    return list2
+}    
+3.
+import java.util.ArrayList
+fun reverse(array:Array<Int>):Array<Int>{
+    var list= ArrayList<Int>()
+    var size=array.size
+    for (i in (size-1) downTo 0){
+        list.add(array[i])
+    }
+    val array2= arrayOfNulls<Int>(list.size)
+    return list.toArray(array2)
+}
+4.
+fun minMax(numbers:Array<Int>):Pair<Int,Int>?{
+    var result:Pair<Int,Int>?=null
+    if(numbers.isEmpty()){
+        result=null
+    } else {
+        var max: Int = numbers[0]
+        var min: Int = numbers[0]
+        for (i in 0 until numbers.size) {
+            if (numbers[i] > max) {
+                max = numbers[i]
+            } else if (numbers[i] < min) {
+                min = numbers[i]
+            }
+            result= Pair(min,max)
+        }
+    }
+    return result
+}

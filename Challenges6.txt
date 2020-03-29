@@ -1,0 +1,46 @@
+Challenges6
+1.
+Są to "anonimowe" funkcje, funkcje bez nazwy, które mogą być przypisane do zmiennej. 
+Zwracają one wartość ostatniego wyrażenia w ich ciele, lecz mogą również nic nie zwracać lub
+zwracać typ Unit.
+Lambdy mogą być używane do przekazywania funkcji jako argumentów do innych funkcji.
+2.
+Zmienna it w lambdach odnosi się do argumentu funkcji, gdy funkcja ta przyjmuje tylko 
+jeden argument.
+3.
+fun main() {
+    fun repeatTask(times:Int,task:()->Unit){
+       for(i in 0 until times){
+           task()
+       }
+    }
+    var printLambda:()->Unit = {
+        println("Message ")
+    }
+    repeatTask(5,printLambda)
+}
+4.
+fun main() {
+    val appRatings = mapOf(
+        "Kalendarz Pro" to arrayOf(1,5,5,4,2,1,5,4),
+        "Kurier Messenger" to arrayOf(5,4,2,5,4,1,1,2),
+        "Myszojeleniopedia" to arrayOf(2,1,2,2,1,2,4,2)
+    )
+    var averageRatings = mutableMapOf<String,Double>()
+    var sum:Int
+    var sum2:Double
+    var average:Double
+    appRatings.forEach {
+        sum=(it.value.reduce{sum,element->
+            (sum+element)})
+        sum2 =sum.toDouble()
+        average=sum2/appRatings.getValue(it.key).size
+        averageRatings.put(it.key,average)
+    }
+    val moreThanThree= averageRatings.filter {
+        it.value>=3.0
+    }
+    val onlyNames=moreThanThree.keys
+    print(averageRatings)
+    print(onlyNames)
+}

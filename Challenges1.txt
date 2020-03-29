@@ -1,0 +1,32 @@
+Challenges 1
+1.
+lastName nie jest zdefiniowany dla wartości firstName innych niż 
+"George" i "Andrzej".
+2.
+answer1=true,answer2=false,answer3=true,answer4=true,answer5=false
+3.
+import kotlin.math.log2
+fun main() {
+    var number: Double = 256.0
+    if(log2(number)%2==0.0){
+        println("This number is a power of 2")
+    } else{
+        println("This number is not a power of 2")
+    }
+}
+4.
+fun main() {
+    val number: Int = 12
+    var counter:Double=0.0
+    val odds:Double
+
+    for(dice1 in 1 until 7){
+        for(dice2 in 1 until 7){
+            if(dice1+dice2==number){
+                counter+=1.0
+            }
+        }
+    }
+    odds=counter/36
+    println("The odds of rolling the number $number are $odds")
+}
