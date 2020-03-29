@@ -8,7 +8,7 @@ answer1=true,answer2=false,answer3=true,answer4=true,answer5=false
 import kotlin.math.log2
 fun main() {
     var number: Double = 256.0
-    if(log2(number)%2==0.0){
+    if(log2(number)%1==0.0){
         println("This number is a power of 2")
     } else{
         println("This number is not a power of 2")
